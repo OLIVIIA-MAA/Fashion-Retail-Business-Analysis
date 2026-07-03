@@ -7,7 +7,6 @@ Revenue growth is usually associated with selling more products. While exploring
 This raised a simple business question: **what was actually driving the company's growth?**
 
 To answer it, I combined sales, product and inventory data to examine how pricing, product portfolio, customer behaviour and inventory allocation influenced commercial performance over time.
-
 The project follows a complete business analytics workflow, from data quality assessment and preparation to business analysis and recommendations, with the goal of explaining the factors behind long-term revenue growth.
 
 ## Business Questions
@@ -37,7 +36,7 @@ The analysis was designed to identify the commercial factors behind long-term re
 - What role did returning customers play in sustaining business performance?
 - Was inventory allocation aligned with commercial performance, or were there signs of overstocking and understocking?
 
-### Business Recommendations
+### What about future
 
 - Which data-driven actions could support future revenue growth and improve inventory efficiency?
 
@@ -46,11 +45,38 @@ The analysis was designed to identify the commercial factors behind long-term re
 The analysis is based on three related datasets representing different aspects of the business. Together, the datasets provide a complete view of sales performance, product characteristics and inventory allocation, enabling business performance to be analysed from multiple perspectives.
 | Dataset | Description | Rows | Columns |
 |----------|-------------|-----:|--------:|
-| **Sales Orders** | Transaction-level sales data containing information about orders, customers, products, pricing, discounts and order dates. | **256 506** | **9** |
-| **Products** | Product catalogue including categories, subcategories, launch dates and launch prices. | **2 500** | **5** |
-| **Inventory** | Inventory records showing stock availability for individual products. | **3 741** | **4** |
+| **Sales Orders** | Orders, customers, products, prices, discounts and order status | **256 506** | **9** |
+| **Products** | Product categories, subcategories, prices and launch dates | **2 500** | **5** |
+| **Inventory** | Product stock by warehouse country and update date | **3 741** | **4** |
 
-The datasets were linked using common identifiers, allowing sales activity to be analysed alongside product characteristics and inventory levels. This integrated approach made it possible to investigate not only **what** changed over time, but also **why** those changes occurred from both commercial and operational perspectives.
+The datasets were linked using **product_id**, creating a unified dataset for analysing sales performance, product characteristics and inventory levels.
+
+## Repository Structure
+
+```text
+Revenue_Growth_Drivers/
+├── assets/
+│   └── visualisations/
+├── data/
+│   ├── inventory.csv
+│   ├── products.csv
+│   └── sales_orders.csv
+├── notebooks/
+│   └── Revenue_Growth_Drivers_Inventory_Optimization.ipynb
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
+
+## Technologies Used
+
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Data Analysis | Pandas, NumPy |
+| Data Visualisation | Matplotlib |
+| Development Environment | Jupyter Notebook |
+| Version Control | Git & GitHub |
 
 ## Project Workflow
 
@@ -78,15 +104,14 @@ The analysis followed a structured business analytics workflow, moving from raw 
 
 ## What the Analysis Revealed
 
-The analysis began with a simple question:
+Every business insight is only as reliable as the data behind it.
 
-**If the business wasn't processing more orders, where was the additional revenue coming from?**
+Before investigating the commercial drivers of revenue growth, the datasets were assessed for completeness, consistency and validity. Missing values, inconsistent formats and data quality issues were addressed to ensure that the analysis was based on a clean and reliable dataset.
 
-The answer became clearer as different parts of the analysis were connected. Rather than being driven by a single factor, revenue growth resulted from several commercial changes that reinforced one another over time.
+The complete data cleaning process is documented in a separate repository:
+**→ [Data Cleaning Repository](LINK_DO_REPOZYTORIUM)**
 
-### Revenue growth was driven by higher customer spending rather than higher sales volume
-
-The most significant finding was that revenue and order volume followed completely different trends. While the number of annual orders remained relatively stable throughout the analysed period, revenue increased consistently year after year. This indicates that growth was achieved by increasing the value of each transaction rather than by processing more orders.
+The first step was to compare revenue with annual order volume to establish whether business growth was driven by increasing transaction volume.
 
 <p align="center">
   <img src="assets/revenue_growth_despite_stable_order_volume.png" width="900">
@@ -96,8 +121,13 @@ The most significant finding was that revenue and order volume followed complete
 <i><b>Figure 1.</b> Revenue increased steadily despite relatively stable annual order volumes.</i>
 </p>
 
-Understanding what increased transaction value became the next objective of the analysis.
+Revenue increased from **21.9M** in 2015 to **31.6M** in 2024, representing a **44.2%** increase over the analysed period. In contrast, annual order volume remained remarkably stable at around **24 thousand orders per year**, while **Average Order Value** increased from **915** to **1 299** (+41.9%).
+These results suggest that the business was creating more value from each transaction rather than processing more orders. The evidence was clear, but the explanation was not.
+This naturally led to the central question of the analysis: **If the business wasn't processing more orders, where was the additional revenue coming from?**
 
+The following analyses explore whether the answer lies in pricing strategy, product portfolio evolution, customer purchasing behaviour or other commercial factors that influenced transaction value over time.
+
+### Revenue growth was driven by higher customer spending rather than higher sales volume
 ### Pricing strategy and product positioning increased Average Order Value
 
 The analysis showed that customers gradually spent more on each purchase. This was supported by higher average selling prices, increasingly expensive product launches and a gradual shift towards higher-value product segments. Together, these factors explain why Average Order Value increased even though purchasing activity remained relatively unchanged.
@@ -167,53 +197,6 @@ Future work could include:
 - marketing campaign analysis to measure promotional effectiveness,
 
 - demand forecasting models to support inventory planning and stock optimisation.
-
-## Repository Structure
-
-```text
-Revenue_Growth_Drivers/
-├── assets/
-│   └── visualisations/
-├── data/
-│   ├── inventory.csv
-│   ├── products.csv
-│   └── sales_orders.csv
-├── notebooks/
-│   └── Revenue_Growth_Drivers_Inventory_Optimization.ipynb
-├── README.md
-├── requirements.txt
-└── LICENSE
-```
-
-## Technologies Used
-
-| Category | Technologies |
-|----------|--------------|
-| Programming Language | Python |
-| Data Analysis | Pandas, NumPy |
-| Data Visualisation | Matplotlib |
-| Development Environment | Jupyter Notebook |
-| Version Control | Git & GitHub |
-
-## How to Run
-
-1. Clone the repository.
-
-```bash
-git clone https://github.com/your-username/Revenue_Growth_Drivers.git
-```
-
-2. Install the required dependencies.
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Launch Jupyter Notebook and run the notebook sequentially.
-
-```bash
-jupyter notebook
-```
 
 ## Final Remarks
 
