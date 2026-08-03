@@ -188,7 +188,7 @@ The customer model should be used to prioritise further review and experiments. 
 
 ## Limitations
 
-Revenue is analysed in nominal terms because inflation-adjusted values are unavailable. Orders with missing discounts remain available for activity analysis but do not contribute to net-revenue calculations, while records containing the unresolved `quantity = 608` value are excluded from the main analytical population.
+Revenue is analysed in nominal terms because inflation-adjusted values are unavailable. Orders with missing discounts remain available for activity analysis but do not contribute to net-revenue calculations, while records containing the unresolved quantity = 608 value are excluded from the main analytical population.
 
 The dataset begins in 2015, so the first observed purchase may not represent the true start of a customer relationship. The predictive target uses a calendar-year horizon and should not be interpreted as permanent customer churn.
 
