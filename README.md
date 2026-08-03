@@ -216,15 +216,3 @@ retail-revenue-repeat-purchase/
 ```
 
 The analysis was created in Python using Pandas, NumPy, Matplotlib and Scikit-learn.
-
-## Author
-
-**Oliwia Małkus**
-
-Aspiring Data Analyst focused on business analysis, data quality, interpretable modelling and presenting analytical results as a clear business story.
-
-## Author
-
-**Oliwia Małkus**
-
-Aspiring Data Analyst focused on business analysis, data quality, interpretable modelling and presenting analytical results as a clear business story.
