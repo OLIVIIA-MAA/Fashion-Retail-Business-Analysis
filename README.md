@@ -94,11 +94,9 @@ December was the strongest month and February the weakest in each year from 2015
 ## Similar market totals concealed different growth paths
 
 Total ten-year revenue was relatively evenly distributed across the analysed markets. Looking only at the final totals could therefore suggest that their performance was almost identical. The annual results showed a more complicated picture. 
-
 France recorded the strongest increase between 2015 and 2024 at **40.4%**, while the Czech Republic recorded **32.8%**. Across the complete market-year series, I identified **13 year-over-year revenue declines**. The markets reached a similar overall scale, but they did not follow the same path and their growth was not uninterrupted.
 
 The product structure was more consistent. Shoes remained the largest category in every market and generated approximately **28–29% of country revenue**, while the Women category contributed around **24%**. At subcategory level, Bags, Scarves and Jewelry recorded the strongest growth, while the weakest increases were concentrated in Men's Outerwear, Kids' Shoes and Men's Jeans.
-
 These differences identify areas that deserve more detailed commercial review, but revenue alone is not enough to decide where the company should invest. A high-growth category may also have high product costs, return rates or fulfilment expenses. Without those measures, the analysis can identify differences in sales performance but cannot rank product areas by profitability.
 
 ## Revenue was distributed across a wider customer base than expected
@@ -124,7 +122,6 @@ Among customers active in 2024, **32.5% had also made a purchase in 2023**. This
 ## Turning historical customer behaviour into a predictive problem
 
 Instead of ending the project with a historical repeat-purchase percentage, I transformed the transaction history into annual customer snapshots. Each row represents one customer in one feature year, while the target shows whether that customer made at least one valid observed purchase in the following calendar year.
-
 The model uses only information that would have been available at the end of the feature year. The customer description includes how recently the last purchase occurred, how many orders were placed, how much assessable revenue was generated, how many months contained activity and how broad the customer's product and category selection was. It also includes average and median order value, activity during the final 90 and 180 days of the year, discount behaviour, previous-year activity and observed customer tenure. Raw customer and order identifiers are retained only as keys and are not used as predictors. The model should learn from customer behaviour, not from arbitrary identifier values. The evaluation is chronological because a random train-test split would mix earlier and later customer periods. Customer-years from 2016 to 2021 form the training population. Behaviour observed in 2022 is used to validate purchases in 2023, while behaviour from 2023 forms the untouched final test for purchases observed in 2024.
 
 Regularised Logistic Regression and Random Forest are compared with a constant-probability baseline and a simple rule based on previous-year activity. The purpose is not to select the most complicated model, but to determine whether modelling provides a meaningful improvement over a decision that could be made from one historical variable.
@@ -169,11 +166,9 @@ The inventory dataset initially appeared to offer an opportunity to compare prod
 The company generated substantially more nominal revenue without completing substantially more orders or selling substantially more units. Average Order Value increased by **35.3%**, while the weighted unit price increased by approximately **36.0%**. Within the common-product population, product-level price changes accounted for **99.5%** of the weighted-price increase.
 
 Sales increasingly occurred in higher nominal price ranges, but the shift should not be interpreted as a major change in customer preference without considering the increase in individual product prices. Discounts remained concentrated at moderate levels, with **82.0% of analysed revenue** generated from orders discounted by no more than 20%.
-
 The revenue pattern was not uniform across time, markets or products. December remained the strongest month in every analysed year, market performance included **13 annual declines**, and product growth varied considerably between categories and subcategories.
 
 Revenue was also distributed across a wider customer base than an 80/20 assumption would suggest. This made next-year customer activity a more useful analytical problem than focusing exclusively on a narrow group of top spenders.
-
 The predictive extension moves the project from historical explanation to customer prioritisation while preserving an important distinction: purchase propensity describes what customers are likely to do naturally, not how they will respond to a marketing intervention.
 
 ## Business implications
