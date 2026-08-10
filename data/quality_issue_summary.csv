@@ -1,0 +1,43 @@
+dataset,item,rows
+products,missing category,0
+products,unrecognized category,0
+products,missing subcategory,0
+products,unrecognized subcategory,0
+products,invalid base price format,0
+products,non-positive base price,0
+products,missing launch date,91
+products,partial launch date,3
+products,invalid launch date,10
+products,unresolved ambiguous launch date,0
+products,day-month dates parsed using DD-MM evidence,148
+sales_orders,missing order date,629
+sales_orders,partial order date,694
+sales_orders,invalid order date,1263
+sales_orders,unresolved ambiguous order date,0
+sales_orders,day-month dates parsed using DD-MM evidence,15569
+sales_orders,missing country,0
+sales_orders,unrecognized country,0
+sales_orders,missing status,0
+sales_orders,unrecognized status,0
+sales_orders,invalid quantity format,0
+sales_orders,fractional quantity,0
+sales_orders,zero quantity,1034
+sales_orders,negative quantity,0
+sales_orders,invalid unit price format,0
+sales_orders,zero unit price,1608
+sales_orders,negative unit price,0
+sales_orders,missing discount,31243
+sales_orders,invalid discount format,0
+sales_orders,discount outside 0-100,0
+inventory,unrecognized warehouse country,0
+inventory,invalid stock format,0
+inventory,fractional stock quantity,0
+inventory,negative stock quantity,0
+inventory,zero stock quantity,255
+inventory,missing stock update date,6
+inventory,partial stock update date,7
+inventory,invalid stock update date,13
+inventory,unresolved ambiguous stock update date,0
+inventory,day-month dates parsed using DD-MM evidence,224
+inventory,update after reference date,0
+inventory,update older than 90 days,3156

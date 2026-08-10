@@ -1,0 +1,7 @@
+finding,value,interpretation
+Orders retained in the cleaned sales table,260000,These rows have reliable identifiers but can still contain field-level flags.
+Orders in the core analysis subset,254804,"The subset has valid dates, recognized categories, positive measures and a product reference."
+Orders with quantity 608,1563,The value is retained and should be compared with a view that excludes it.
+Assessable orders before recorded product launch,121535,"49.2% of assessable orders occur before the recorded launch date, so the field needs source clarification."
+Inventory rows with update older than 90 days,3156,"The threshold is a review rule based on the project reference date, not a confirmed error."
+Sales rows with missing discount,31243,"Gross value is available, but net value is left missing without a discount assumption."
