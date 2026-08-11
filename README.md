@@ -219,11 +219,9 @@ The company-level analysis showed that higher recorded prices were much more imp
 </p>
 
 That pattern was visible across every major category. Weighted unit prices increased by approximately 35–37%, while changes in orders and units were much smaller.
-
 Accessories recorded the strongest revenue growth at 42.5%, supported by a 37.0% increase in weighted unit price and modest growth in both orders and units. Women revenue increased by 38.9%, while units increased by only 1.5% and weighted unit price by 36.4%. Shoes showed a similar pattern: revenue increased by 37.8%, units by only 1.1% and weighted unit price by 35.8%.
 
 The contrast was even clearer in Kids and Men. Kids revenue increased by 34.4% despite a 0.9% decline in units. Men revenue increased by 30.3% even though units sold fell by 3.4%, while weighted unit price increased by 35.0%.
-
 Effective discount changes remained close to zero across the major categories.
 
 **The price-led revenue pattern was therefore visible across the assortment, not only in the company total.**
@@ -259,9 +257,7 @@ The inventory dataset initially appeared suitable for comparing product demand w
 Approximately 85.0% of inventory rows were more than 90 days old, and the median time since the recorded update was 303 days.
 
 The recorded inventory structure was relatively close to the category structure of 2024 unit sales, with the largest difference between category shares equal to 1.3 percentage points. This is useful as a structural comparison, but it does not show whether stock was sufficient, located in the correct warehouse or recorded at the same time as the demand being compared with it.
-
 With data this stale, current shortages, excess stock and replenishment requirements cannot be identified reliably.
-
 Rather than forcing an operational recommendation from outdated records, I treated inventory freshness as a data-quality limitation. Reliable inventory optimisation would require current warehouse-level stock, historical inventory snapshots, product-level demand, stockouts, lead times, product cost and warehouse location.
 
 **The decision not to optimise inventory is part of the analysis itself: the quality and timing of the available data determine which business questions can be answered responsibly.**
